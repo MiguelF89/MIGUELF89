@@ -1,0 +1,15 @@
+function calculadora(a, b, operacao) {
+    if (operacao === 'soma') return a + b;
+    if (operacao === 'subtracao') return a - b;
+    if (operacao === 'multiplicacao') return a * b;
+    if (operacao === 'divisao') return b !== 0 ? a / b : "Divisão por zero não é permitida";
+    return "Operação inválida";
+}
+
+// Exemplos de uso:
+console.log(calculadora(10, 5, 'soma')); // 15
+console.log(calculadora(10, 5, 'subtracao')); // 5
+console.log(calculadora(10, 5, 'multiplicacao')); // 50
+console.log(calculadora(10, 5, 'divisao')); // 2
+console.log(calculadora(10, 0, 'divisao')); // "Divisão por zero não é permitida"
+console.log(calculadora(10, 5, 'modulo')); // "Operação inválida"
